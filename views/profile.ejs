@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head') %>
+        <title>Profile</title>
+        <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="profile-container">
+        <h2>Welcome, <%= user.username %>!</h2>
+        <p><strong>Email:</strong>
+            <%= user.email %>
+        </p>
+        <p><strong>Member Since:</strong>
+            <%= new Date(user.created_at).toDateString() %>
+        </p>
+        <a href="/logout" class="logout-btn">Logout</a>
+    </div>
+</body>
+
+</html>
